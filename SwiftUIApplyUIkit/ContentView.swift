@@ -13,6 +13,7 @@ struct ContentView: View {
         VStack {
             TextField("這裡是SwiftUI元件", text: $data)
             UIkitToSwiftUI(data: $data)
+            UITableViewToSwiftUI()
         }
     }
 }
