@@ -16,7 +16,7 @@ class MyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        sendLabel.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -31,4 +31,11 @@ class MyViewController: UIViewController {
     }
     */
 
+}
+extension MyViewController:UITextFieldDelegate{
+    //讓鍵盤按下 return 時縮回
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+          textField.resignFirstResponder()
+          return true
+    }
 }
